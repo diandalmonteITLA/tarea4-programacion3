@@ -2,12 +2,13 @@ using Domain.Interfaces;
 using Application;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
+using Identity;
 
 namespace Web
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -19,11 +20,13 @@ namespace Web
 
 
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
+            builder.Services.AddIdentityLayerIoc(builder.Configuration);
             builder.Services.AddScoped<ListingService>();
 
 
             var app = builder.Build();
+
+            await app.Services.RunIdentitySeedAsync();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

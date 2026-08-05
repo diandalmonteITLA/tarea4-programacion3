@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36915.13 d17.14
+VisualStudioVersion = 17.14.36915.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{DDF21976-B4CB-4327-991A-B6C494906858}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{D4972A16-A438-478D-9BD6-BB6B7C24729F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{3CD922C0-DF8E-436D-93BB-22D20C22ADE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Identity\Identity.csproj", "{C2E135B2-DEA0-430E-92E7-EE8A517BF602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3CD922C0-DF8E-436D-93BB-22D20C22ADE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CD922C0-DF8E-436D-93BB-22D20C22ADE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CD922C0-DF8E-436D-93BB-22D20C22ADE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E135B2-DEA0-430E-92E7-EE8A517BF602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E135B2-DEA0-430E-92E7-EE8A517BF602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E135B2-DEA0-430E-92E7-EE8A517BF602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E135B2-DEA0-430E-92E7-EE8A517BF602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

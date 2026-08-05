@@ -1,7 +1,5 @@
 using Application;
 using Domain;
-using Application;
-using Domain;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebUI.Pages.Listings
