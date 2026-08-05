@@ -1,0 +1,37 @@
+﻿@page
+@model WebUI.Pages.Listings.CreateModel
+@{
+    ViewData["Title"] = "Crear Anuncio";
+}
+
+<div class="container mt-4">
+    <h2>Crear un nuevo Listing</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="NewListing.Name" class="form-label">Nombre</label>
+                    <input asp-for="NewListing.Name" class="form-control" placeholder="Ej: Laptop Dell" />
+                    <span asp-validation-for="NewListing.Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NewListing.Price" class="form-label">Precio</label>
+                    <input asp-for="NewListing.Price" type="number" step="0.01" class="form-control" />
+                    <span asp-validation-for="NewListing.Price" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NewListing.Description" class="form-label">Descripción</label>
+                    <textarea asp-for="NewListing.Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="NewListing.Description" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar Listing</button>
+                <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

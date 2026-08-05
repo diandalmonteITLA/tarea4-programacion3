@@ -1,0 +1,30 @@
+﻿@page "{id:Guid}"
+@model WebUI.Pages.Listings.DeleteModel
+@{
+    ViewData["Title"] = "Desactivar Anuncio";
+}
+
+<div class="container mt-4">
+    <h2 class="text-danger">¿Estás seguro que deseas desactivar este Listing?</h2>
+    <hr />
+
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@Model.ListingToDelete.Name</dd>
+
+            <dt class="col-sm-2">Precio</dt>
+            <dd class="col-sm-10">$@Model.ListingToDelete.Price</dd>
+
+            <dt class="col-sm-2">Descripción</dt>
+            <dd class="col-sm-10">@Model.ListingToDelete.Description</dd>
+        </dl>
+    </div>
+
+    <form method="post">
+        <!-- Enviamos el ID al método OnPostAsync -->
+        <input type="hidden" asp-for="ListingToDelete.Id" name="id" />
+        <button type="submit" class="btn btn-danger">Sí, Desactivar</button>
+        <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

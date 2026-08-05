@@ -1,0 +1,37 @@
+﻿@page
+@model WebUI.Pages.Listings.IndexModel
+@{
+    ViewData["Title"] = "Listado de Anuncios";
+}
+
+<div class="container mt-4">
+    <h2>Listado de Listings</h2>
+    <a asp-page="./Create" class="btn btn-primary mb-3">Crear Nuevo</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Listings)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>$@item.Price</td>
+                    <td>@item.Description</td>
+                    <td>@(item.IsActive ? "Activo" : "Inactivo")</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Desactivar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

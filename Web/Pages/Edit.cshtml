@@ -1,0 +1,35 @@
+﻿@page "{id:Guid}"
+@model WebUI.Pages.Listings.EditModel
+@{
+    ViewData["Title"] = "Editar Anuncio";
+}
+
+<div class="container mt-4">
+    <h2>Editar Listing</h2>
+    <hr />
+    <form method="post">
+        <input type="hidden" asp-for="ListingToEdit.Id" />
+        <input type="hidden" asp-for="ListingToEdit.IsActive" />
+
+        <div class="mb-3">
+            <label asp-for="ListingToEdit.Name" class="form-label">Nombre</label>
+            <input asp-for="ListingToEdit.Name" class="form-control" />
+            <span asp-validation-for="ListingToEdit.Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ListingToEdit.Price" class="form-label">Precio</label>
+            <input asp-for="ListingToEdit.Price" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="ListingToEdit.Price" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ListingToEdit.Description" class="form-label">Descripción</label>
+            <textarea asp-for="ListingToEdit.Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="ListingToEdit.Description" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Guardar Cambios</button>
+        <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
