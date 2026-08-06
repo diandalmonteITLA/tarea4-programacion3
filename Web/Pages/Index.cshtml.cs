@@ -1,9 +1,11 @@
 using Application;
 using Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebUI.Pages.Listings
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly ListingService _listingService;

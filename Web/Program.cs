@@ -1,8 +1,10 @@
-using Domain.Interfaces;
 using Application;
+using Application.Interfaces;
+using Domain.Interfaces;
+using Identity;
+using Identity.Services;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
-using Identity;
 
 namespace Web
 {
@@ -21,7 +23,10 @@ namespace Web
 
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddIdentityLayerIoc(builder.Configuration);
+            builder.Services.AddTransient<IEmailService, EmailService>();
             builder.Services.AddScoped<ListingService>();
+            builder.Services.AddTransient<AccountService>();
+
 
 
             var app = builder.Build();

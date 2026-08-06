@@ -1,0 +1,45 @@
+﻿@page
+@model Web.Pages.LoginModel
+@{
+    ViewData["Title"] = "Log In";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0 text-center">Log In</h4>
+            </div>
+            <div class="card-body">
+                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @Model.ErrorMessage
+                    </div>
+                }
+
+                <form method="post">
+                    <div class="mb-3">
+                        <label asp-for="LoginInput.UserName" class="form-label">Email or Username</label>
+                        <input asp-for="LoginInput.UserName" class="form-control" autocomplete="username" />
+                        <span asp-validation-for="LoginInput.UserName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="LoginInput.Password" class="form-label">Password</label>
+                        <input asp-for="LoginInput.Password" type="password" class="form-control" autocomplete="current-password" />
+                        <span asp-validation-for="LoginInput.Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
