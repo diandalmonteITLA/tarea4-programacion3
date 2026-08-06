@@ -22,7 +22,6 @@
     </div>
 
     <form method="post">
-        <!-- Enviamos el ID al método OnPostAsync -->
         <input type="hidden" asp-for="ListingToDelete.Id" name="id" />
         <button type="submit" class="btn btn-danger">Sí, Desactivar</button>
         <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>

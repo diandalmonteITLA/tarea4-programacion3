@@ -25,7 +25,15 @@ namespace Identity.Services
         {
             LoginResponseDto response = new() { Email = "", Id = "", LastName = "", Name = "", UserName = "", HasError = false, Errors = [] };
 
+            if (loginDto.UserName == null)
+            {
+                response.HasError = true;
+                response.Errors.Add($"Introduzca un email");
+                return response;
+            }
             var user = await _userManager.FindByNameAsync(loginDto.UserName);
+
+
             if (user == null)
             {
                 response.HasError = true;

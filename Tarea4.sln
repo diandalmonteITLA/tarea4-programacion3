@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Identity\Identity.csproj", "{C2E135B2-DEA0-430E-92E7-EE8A517BF602}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{7700B2A3-4CC7-422E-A50B-BA034D66C18D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C2E135B2-DEA0-430E-92E7-EE8A517BF602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2E135B2-DEA0-430E-92E7-EE8A517BF602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2E135B2-DEA0-430E-92E7-EE8A517BF602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7700B2A3-4CC7-422E-A50B-BA034D66C18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7700B2A3-4CC7-422E-A50B-BA034D66C18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7700B2A3-4CC7-422E-A50B-BA034D66C18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7700B2A3-4CC7-422E-A50B-BA034D66C18D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
